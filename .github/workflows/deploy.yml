@@ -24,7 +24,7 @@ jobs:
       - name: Deploy Django project in 'lancar' folder
         run: |
           ssh -i ~/.ssh/id_rsa ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
-            cd /var/www/html/Sipresi_Pemkot
+            cd ~/Sipresi_Pemkot
             git pull origin main
 
             cd lancar
